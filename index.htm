@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Puja Rani - Graphic Designer Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #0f0f0f;
+            color: #ffffff;
+            line-height: 1.6;
+        }
+
+        .page {
+            width: 100%;
+            max-width: 850px;
+            margin: 0 auto;
+            padding: 60px 40px;
+            background: #0f0f0f;
+            page-break-after: always;
+            min-height: 1000px;
+        }
+
+        .page-break {
+            page-break-after: always;
+        }
+
+        h1 {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 700;
+            font-size: 48px;
+            margin-bottom: 20px;
+            text-align: center;
+            color: #ffffff;
+        }
+
+        h2 {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 700;
+            font-size: 32px;
+            margin-bottom: 20px;
+            color: #ffffff;
+            border-bottom: 4px solid #4F9FFF;
+            padding-bottom: 10px;
+        }
+
+        h3 {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600;
+            font-size: 18px;
+            color: #4F9FFF;
+            margin-top: 15px;
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            font-family: 'Poppins', sans-serif;
+            font-size: 24px;
+            font-weight: 600;
+            text-align: center;
+            color: #ffffff;
+            margin-bottom: 40px;
+        }
+
+        .divider {
+            height: 2px;
+            background: #333333;
+            margin: 30px 0;
+        }
+
+        .divider-blue {
+            height: 4px;
+            background: #4F9FFF;
+            margin: 20px 0;
+        }
+
+        .contact-info {
+            text-align: center;
+            font-size: 14px;
+            color: #b0b0b0;
+            margin: 20px 0;
+        }
+
+        .contact-info a {
+            color: #4F9FFF;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .metrics {
+            font-family: 'Poppins', sans-serif;
+            font-size: 18px;
+            font-weight: 700;
+            color: #4F9FFF;
+            margin: 15px 0;
+        }
+
+        .highlight {
+            background: #1a2a3a;
+            border-left: 4px solid #4F9FFF;
+            padding: 15px 20px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+
+        .highlight strong {
+            color: #4F9FFF;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        ul {
+            margin-left: 20px;
+            margin-top: 10px;
+        }
+
+        li {
+            margin: 8px 0;
+            font-size: 13px;
+            line-height: 1.6;
+            color: #e0e0e0;
+        }
+
+        .two-column {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin: 20px 0;
+            justify-items: center;
+        }
+
+        .column {
+            padding-right: 0;
+        }
+
+        .project-box {
+            background: #1a1a1a;
+            padding: 20px;
+            margin: 15px 0;
+            border-radius: 6px;
+            border-left: 4px solid #4F9FFF;
+        }
+
+        .project-title {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600;
+            font-size: 16px;
+            color: #ffffff;
+            margin-bottom: 8px;
+        }
+
+        .project-desc {
+            font-size: 13px;
+            color: #b0b0b0;
+            line-height: 1.5;
+        }
+
+        .impact {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600;
+            color: #4F9FFF;
+            font-size: 12px;
+            margin-top: 8px;
+        }
+
+        .experience-item {
+            margin-bottom: 25px;
+            padding: 15px 0;
+            border-bottom: 1px solid #333333;
+        }
+
+        .job-title {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 700;
+            font-size: 15px;
+            color: #ffffff;
+        }
+
+        .job-meta {
+            font-size: 12px;
+            color: #4F9FFF;
+            margin: 5px 0;
+        }
+
+        .job-desc {
+            font-size: 13px;
+            color: #b0b0b0;
+            margin-top: 8px;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+        }
+
+        .skill-section h4 {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600;
+            font-size: 14px;
+            color: #4F9FFF;
+            margin-bottom: 10px;
+            margin-top: 15px;
+        }
+
+        .skill-section:first-child h4:first-of-type {
+            margin-top: 0;
+        }
+
+        .cta-section {
+            text-align: center;
+            padding: 40px 0;
+        }
+
+        .cta-heading {
+            font-family: 'Poppins', sans-serif;
+            font-size: 36px;
+            font-weight: 700;
+            color: #ffffff;
+            margin-bottom: 20px;
+        }
+
+        .cta-text {
+            font-size: 14px;
+            color: #b0b0b0;
+            margin-bottom: 30px;
+            line-height: 1.8;
+        }
+
+        .contact-box {
+            background: #1a2a3a;
+            border: 2px solid #4F9FFF;
+            padding: 20px;
+            border-radius: 6px;
+            margin: 20px 0;
+        }
+
+        .contact-box p {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600;
+            font-size: 15px;
+            color: #ffffff;
+            margin: 8px 0;
+        }
+
+        .contact-box a {
+            color: #4F9FFF;
+            text-decoration: none;
+        }
+
+        .qr-container {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin: 30px 0;
+        }
+
+        .qr-box {
+            text-align: center;
+        }
+
+        .qr-placeholder {
+            width: 120px;
+            height: 120px;
+            background: #1a1a1a;
+            display: inline-block;
+            border-radius: 6px;
+            margin: 10px 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+            color: #4F9FFF;
+            border: 2px solid #333333;
+        }
+
+        .qr-label {
+            font-size: 12px;
+            color: #b0b0b0;
+            margin-top: 8px;
+        }
+
+        .before-after {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin: 20px 0;
+        }
+
+        .before-after-item {
+            text-align: center;
+        }
+
+        .before-after-label {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600;
+            font-size: 13px;
+            color: #6B7280;
+            margin-bottom: 8px;
+        }
+
+        .image-placeholder {
+            width: 100%;
+            height: 200px;
+            background: linear-gradient(135deg, #222222 0%, #1a1a1a 100%);
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #666666;
+            font-size: 12px;
+            border: 1px solid #333333;
+        }
+
+        .case-link {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600;
+            color: #4F9FFF;
+            text-decoration: none;
+            font-size: 14px;
+            margin-top: 15px;
+            display: inline-block;
+        }
+
+        .case-link:hover {
+            text-decoration: underline;
+        }
+
+        @media print {
+            body {
+                margin: 0;
+                padding: 0;
+            }
+
+            .page {
+                page-break-after: always;
+                margin: 0;
+                padding: 40px;
+                box-shadow: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- PAGE 1: COVER -->
+    <div class="page">
+        <h1>PUJA RANI</h1>
+        <div class="subtitle">Graphic Designer<br>Marketing Creatives + Product Visuals</div>
+
+        <div class="divider"></div>
+
+        <div class="highlight" style="text-align: center; border: none;">
+            <strong>CLIENTS:</strong> Rentomojo | Redient Security | Coffee Point | Quick Bites<br><br>
+            <strong>TOOLS:</strong> Photoshop | Illustrator | Figma | InDesign | Canva
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="highlight">
+            <strong>"My designs boosted Rentomojo conversions by 30% with clearer product visuals and consistent branding."</strong>
+        </div>
+
+        <div class="divider"></div>
+
+
+        <!-- PAGE 2: RENTOMOJO FURNITURE CAMPAIGNS (Hero case study) -->
+        <div class="page page-break">
+            <h2>RENTOMOJO FURNITURE CAMPAIGNS</h2>
+            <p style="color: #b0b0b0; margin-bottom: 20px;">Marketing Creatives + Product Visuals</p>
+
+            <div class="metrics">
+                ✓ +30% Conversions<br>
+                ✓ -22% Product Returns<br>
+                ✓ +42% Ad Click-Through Rate
+            </div>
+
+            <div class="divider-blue"></div>
+
+            <h3>THE CHALLENGE</h3>
+            <ul>
+                <li>❌ Product sizes unclear for online shoppers</li>
+                <li>❌ Only 1 photo angle per item</li>
+                <li>❌ Inconsistent colors & backgrounds</li>
+                <li>❌ Low customer confidence = high returns</li>
+            </ul>
+
+            <h3>THE SOLUTION</h3>
+            <ul>
+                <li>✅ Dimension guides on every product</li>
+                <li>✅ 3 viewing angles minimum</li>
+                <li>✅ Feature icons + human-scale illustrations</li>
+                <li>✅ Consistent white backgrounds</li>
+                <li>✅ Lifestyle product blend</li>
+            </ul>
+
+            <h3>RESULT</h3>
+            <p style="font-size: 14px; color: #b0b0b0; margin: 15px 0;">Better visuals = confident buyers = more sales & reduced returns.</p>
+
+            <div class="divider"></div>
+
+            <p style="text-align: center; margin-top: 30px;">
+                <a href="https://behance.net/pujarani14" target="_blank" class="case-link">VIEW FULL CASE STUDY →</a>
+            </p>
+
+            <!-- PAGE 3: RENTOMOJO MARKETING CREATIVES -->
+            <div class="page page-break">
+                <h2>RENTOMOJO MARKETING CREATIVES</h2>
+                <p style="color: #b0b0b0; margin-bottom: 25px;">Promotional & Launch Campaigns</p>
+
+                <div class="two-column">
+                    <div class="column">
+                        <h3>MUMBAI STORE LAUNCH EMAILER</h3>
+                        <p style="font-size: 13px; color: #b0b0b0; line-height: 1.6;">Promotional event invite + coupon. Clear visual hierarchy + bold CTA. Encouraged attendance & in-store visits.</p>
+                        <div class="impact" style="margin-top: 10px;">Impact: High email open rate</div>
+                        <div class="image-placeholder" style="margin-top: 12px; height: auto; padding: 0;">
+                            <img src="images/Emailer6.jpg" style="max-width:100%; height:auto; display:block; margin:0 auto; border-radius:6px;">
+                        </div>
+                    </div>
+
+                    <div class="column">
+                        <h3>DISCOUNT POP-UP BANNER</h3>
+                        <p style="font-size: 13px; color: #b0b0b0; line-height: 1.6;">₹200 off promotion campaign. Gift-box visual + strong typography. Used across multiple digital platforms.</p>
+                        <div class="impact" style="margin-top: 10px;">Impact: Client reused on 5+ products</div>
+                        <div class="image-placeholder" style="margin-top: 12px; height: auto; padding: 0;">
+                            <img src="images/pop up.jpg" alt="Discount pop-up banner" style="max-width:100%; height:auto; display:block; margin:0 auto; border-radius:6px;">
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- PAGE 4: SOCIAL MEDIA ADS -->
+                <div class="page page-break">
+                    <h2>SOCIAL MEDIA ADS</h2>
+                    <p style="color: #b0b0b0; margin-bottom: 25px;">High-Engagement Campaign Designs</p>
+
+                    <div class="two-column">
+                        <!-- LEFT COLUMN: MASCARA -->
+                        <div class="column">
+                            <h3>MASCARA PROMOTION - FLAWLESS</h3>
+                            <p style="font-size: 13px; color: #b0b0b0; line-height: 1.6;">
+                                Bold, eye-catching beauty promotion. Vibrant lashes and strong typography designed to stop scrollers and drive engagement.
+                            </p>
+                            <div class="impact" style="margin-top: 10px;">Impact: +25% engagement rate</div>
+                            <div class="image-placeholder" style="margin-top: 12px; height:auto; padding:0;">
+                                <img src="images/Lashes-That-Party-All-Night-Long.jpg" alt="Flawless mascara ad" style="max-width:100%; height:auto; display:block; margin:0 auto; border-radius:6px;">
+                            </div>
+                        </div>
+
+                        <!-- RIGHT COLUMN: QUICK BITES -->
+                        <div class="column">
+                            <h3>FOOD MENU - QUICK BITES</h3>
+                            <p style="font-size: 13px; color: #b0b0b0; line-height: 1.6;">
+                                Modern food promotion with appetizing layout. 50% OFF highlight and clear delivery details to push fast orders.
+                            </p>
+                            <div class="impact" style="margin-top: 10px;">Impact: Drove customer orders & conversions</div>
+                            <div class="image-placeholder" style="margin-top: 12px; height:auto; padding:0;">
+                                <img src="images/quick.jpg" alt="Quick Bites food menu ad" style="max-width:100%; height:auto; display:block; margin:0 auto; border-radius:6px;">
+                            </div>
+                        </div>
+                    </div <!-- PAGE 5: PRINT & BRANDING -->
+                    <div class="page page-break">
+                        <h2>PRINT & BRANDING DESIGN</h2>
+                        <p style="color: #b0b0b0; margin-bottom: 25px;">Professional Collateral & Identity Work</p>
+
+                        <div class="two-column">
+                            <div class="column">
+                                <h3>UNIVERSAL TRIBES BROCHURE</h3>
+                                <ul style="margin-bottom: 15px;">
+                                    <li><strong>Purpose:</strong> Brand storytelling for Indigenous cultural organization</li>
+                                    <li><strong>Design:</strong> Earth-tone colors + mission-focused layout</li>
+                                    <li><strong>Content:</strong> Mission, values, products, community impact</li>
+                                    <li><strong>Outcome:</strong> Professional brand presence & cultural representation</li>
+                                </ul>
+                                <div class="image-placeholder" style="height:auto; margin-bottom: 30px; padding:0;">
+                                    <img src="images/universal.jpg" alt="Universal Tribes brochure" style="max-width:100%; height:auto; display:block; margin:0 auto; border-radius:6px;">
+                                </div>
+                            </div>
+
+                            <div class="column">
+                                <h3>DESIGN SCAPE BUSINESS CARD</h3>
+                                <ul>
+                                    <li><strong>Purpose:</strong> Professional client identity & brand asset</li>
+                                    <li><strong>Design:</strong> Modern blue gradient + geometric elements</li>
+                                    <li><strong>Details:</strong> Clean typography, premium finish, professional feel</li>
+                                    <li><strong>Outcome:</strong> Strong professional branding asset</li>
+                                </ul>
+                                <div class="image-placeholder" style="height:auto; padding:0;">
+                                    <img src="images/Design scape.jpg" alt="Design Scape business card" style="max-width:100%; height:auto; display:block; margin:0 auto; border-radius:6px;">
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <!-- PAGE 6: VISUAL STORYTELLING + EXPERIENCE -->
+                        <div class="page page-break">
+                            <h2>VISUAL STORYTELLING</h2>
+                            <p style="color: #b0b0b0; margin-bottom: 20px;">Poster & Inspirational Design</p>
+
+                            <div class="two-column">
+                                <!-- Poster 1: DREAMS -->
+                                <div class="column">
+                                    <h3>DREAMS POSTER</h3>
+                                    <p style="font-size: 13px; color: #b0b0b0; margin: 10px 0; line-height: 1.6;">
+                                        Modern poster blending photography + geometric elements. Designed to inspire positivity and forward-thinking. Clean composition with vibrant color blocking.
+                                    </p>
+                                    <div class="image-placeholder" style="height:auto; margin-bottom: 40px; padding:0;">
+                                        <img src="images/Dream.jpg" alt="Dreams inspirational poster" style="max-width:100%; height:auto; display:block; margin:0 auto; border-radius:6px;">
+                                    </div>
+                                </div>
+
+                                <!-- Poster 2: QUOTE POSTER -->
+                                <div class="column">
+                                    <h3>QUOTE POSTER</h3>
+                                    <p style="font-size: 13px; color: #b0b0b0; margin: 10px 0; line-height: 1.6;">
+                                        Black‑and‑white portrait poster with bold red accents and strong typography, designed to communicate an uplifting quote with high contrast and impact.
+                                    </p>
+                                    <div class="image-placeholder" style="height:auto; margin-bottom: 40px; padding:0;">
+                                        <img src="images/quotes.jpg" alt="Quote typography poster" style="max-width:100%; height:auto; display:block; margin:0 auto; border-radius:6px;">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <h3 style="margin-top: 20px; margin-bottom: 10px;">EXPERIENCE</h3>
+
+                            <p style="font-size: 13px; color: #b0b0b0; line-height: 1.8;">
+                                Rentomojo – Graphic Design Consultant (May – Aug 2025)<br>
+                                Redient Security – Graphic Design Intern (Mar – May 2025)<br>
+                                Freelance Graphic Designer ( Feb – Mar 2024)
+                            </p>
+
+
+
+
+                            <!-- PAGE 7: SKILLS & EXPERTISE -->
+                            <div class="page page-break">
+                                <h2>SKILLS & EXPERTISE</h2>
+
+
+                                <div class="skills-grid">
+                                    <div class="skill-section">
+                                        <h4>🎨 DESIGN TOOLS</h4>
+                                        <p style="font-size: 13px; color: #b0b0b0; line-height: 1.8;">
+                                            <strong>Software:</strong><br>
+                                            • Adobe Photoshop <br>
+                                            • Adobe Illustrator <br>
+                                            • Figma <br>
+                                            • Adobe InDesign <br>
+                                            • Canva
+                                        </p>
+                                    </div>
+
+                                    <div class="skill-section">
+                                        <h4>✨ SPECIALIZATIONS</h4>
+                                        <p style="font-size: 13px; color: #b0b0b0; line-height: 1.8;">
+                                            • Visual Storytelling <br>
+                                            • Marketing Creatives <br>
+                                            • Social Media Design <br>
+                                            • Digital Design <br>
+                                            • Video Editing
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="divider" style="margin: 35px 0;"></div>
+
+                                <h3>EDUCATION</h3>
+                                <p style="font-size: 13px; color: #b0b0b0; line-height: 1.8; margin: 15px 0;">
+                                    • Bachelor in Political Science, Patna Women’s College, Patna University<br>
+                                    • Certifications: Photoshop, Canva Essentials, Graphic Design, Foundations of UX Design
+                                </p>
+
+                                <!-- PAGE 8: CALL TO ACTION (No QR + Social Links) -->
+                                <div class="page page-break">
+                                    <div class="cta-section">
+                                        <div class="cta-heading" style="font-size: 20px;">LET'S CREATE SOMETHING GREAT</div>
+
+                                        <p style="font-size: 16px; color: #b0b0b0; margin: 15px 0;">Available for freelance & full-time design roles</p>
+
+                                        <div class="contact-box" style="margin: 20px 0;">
+                                            <p style="margin: 5px 0;">📞 8521178640</p>
+                                            <p style="margin: 5px 0;">✉️ <a href="mailto:puja.pwc32@gmail.com">puja.pwc32@gmail.com</a></p>
+                                        </div>
+
+                                        <p style="font-size: 13px; color: #4F9FFF; text-align: center; margin: 15px 0;">
+                                            <a href="https://behance.net/pujarani14" target="_blank">Behance</a> &nbsp; • &nbsp;
+                                            <a href="https://linkedin.com/in/puja-rani32" target="_blank">LinkedIn</a>
+                                        </p>
+
+                                        <p style="font-size: 11px; color: #b0b0b0; text-align: center; margin-top: 10px;">
+                                            Puja Rani | Graphic Designer 
+                                        </p>
+                                    </div>
+                                </div>
