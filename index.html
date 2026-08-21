@@ -434,7 +434,429 @@
                 margin-left: 20px !important;
             }
         }
-    </style>
+    
+/* Integrated Rentomojo case study */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.7;
+            color: #1a202c;
+            background: #ffffff;
+        }
+        @media print {
+            body {
+                margin: 0;
+                padding: 0;
+            }
+            .rm-container {
+                page-break-after: avoid;
+                break-inside: avoid;
+            }
+            section {
+                page-break-inside: avoid;
+                break-inside: avoid;
+            }
+            h1, h2, .rm-case h3 {
+                page-break-after: avoid;
+                break-after: avoid;
+            }
+            .rm-case table {
+                page-break-inside: avoid;
+                break-inside: avoid;
+            }
+        }
+
+        .rm-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 40px;
+        }
+
+        .rm-header {
+            background: linear-gradient(135deg, #2d3748 0%, #1a202c 100%);
+            color: white;
+            padding: 70px 40px;
+            text-align: center;
+        }
+
+        .rm-header h1 {
+            font-size: 3.2em;
+            font-weight: 800;
+            margin-bottom: 15px;
+            letter-spacing: -1px;
+        }
+
+        .rm-header p {
+            font-size: 1.3em;
+            opacity: 0.95;
+            margin-bottom: 40px;
+        }
+
+        .rm-metrics {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+            gap: 20px;
+            margin: 40px auto 0;
+            max-width: 900px;
+        }
+
+        .rm-metric {
+            background: white;
+            padding: 15px 20px;
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+            height: 94px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .rm-metric .rm-case h3 {
+            font-size: 1.8em;
+            font-weight: 800;
+            margin-bottom: 4px;
+            color: #27ae60;
+            line-height: 1.1;
+        }
+
+        .rm-metric p {
+            font-size: 0.85em;
+            color: #4a5568;
+            margin: 0;
+            font-weight: 500;
+        }
+
+        /* REDUCED SECTION SPACING */
+        .rm-section {
+            padding: 30px 40px;
+            /* Reduced from 60px top/bottom */
+        }
+
+        .rm-section:nth-child(even) {
+            background: #f8fafc;
+        }
+
+        .rm-case h2 {
+            font-size: 2.4em;
+            color: #1a202c;
+            margin-bottom: 10px;
+            /* Reduced from 30px */
+            font-weight: 700;
+            border-bottom: 4px solid #4299e1;
+            padding-bottom: 20px;
+        }
+
+        .rm-transformation-context {
+            text-align: center;
+            font-size: 1.2em;
+            color: #4a5568;
+            margin: 20px 0;
+            /* Reduced */
+            font-weight: 600;
+        }
+
+        .rm-ba-hero {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            /* Reduced from 40px */
+            margin: 30px 0;
+            /* Reduced from 50px */
+        }
+
+        .rm-ba-item {
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+            background: #ffffff;
+        }
+
+        .rm-ba-img {
+            width: 100%;
+            height: 320px;
+            object-fit: contain;
+            display: block;
+            background: #f8fafc;
+        }
+
+        .rm-ba-label {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 20px;
+            text-align: center;
+            font-weight: 700;
+            color: #1a202c;
+            font-size: 1em;
+        }
+
+        .rm-ba-label strong {
+            display: block;
+            font-size: 1.2em;
+            color: #dc2626;
+        }
+
+        .rm-ba-label small {
+            display: block;
+            font-weight: 400;
+            opacity: 0.85;
+            margin-top: 5px;
+            font-size: 0.9em;
+        }
+
+        .rm-transformation-result {
+            text-align: center;
+            font-size: 1.2em;
+            color: #27ae60;
+            margin: 20px 0;
+            /* Reduced */
+            font-weight: 600;
+        }
+
+        /* REDUCED GRID SPACING */
+        .rm-design-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+            /* Reduced from 25px */
+            margin: 30px 0;
+            /* Reduced from 50px */
+        }
+
+        .rm-design-card {
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s ease;
+            background: #ffffff;
+        }
+
+        .rm-design-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+        }
+
+        .rm-design-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: contain;
+            display: block;
+            background: #f8fafc;
+        }
+
+        .rm-card-label {
+            background: white;
+            padding: 18px;
+            text-align: center;
+            font-weight: 600;
+            color: #2d3748;
+            font-size: 0.95em;
+        }
+
+        .rm-card-label small {
+            display: block;
+            font-weight: 400;
+            opacity: 0.8;
+            margin-top: 5px;
+            font-size: 0.85em;
+        }
+
+        .rm-hero-section {
+            margin: 30px 0;
+            /* Reduced from 50px */
+        }
+
+        .rm-hero-img {
+            width: 100%;
+            border-radius: 20px;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+            display: block;
+            object-fit: contain;
+            background: #f8fafc;
+        }
+
+        .rm-hero-caption {
+            text-align: center;
+            font-size: 1.1em;
+            color: #4a5568;
+            margin-top: 20px;
+            /* Reduced */
+            font-weight: 500;
+        }
+
+        .rm-two-column {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            /* Reduced from 40px */
+            margin: 30px 0;
+            /* Reduced from 50px */
+        }
+
+        .rm-two-column-item {
+            background: white;
+            padding: 30px;
+            /* Reduced from 40px */
+            border-radius: 16px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+        }
+
+        .rm-two-column-item .rm-case h3 {
+            margin-top: 0;
+            margin-bottom: 20px;
+            /* Reduced */
+            font-size: 1.5em;
+        }
+
+        .rm-two-column-item p {
+            margin-bottom: 15px;
+            /* Reduced */
+            line-height: 1.8;
+        }
+
+        .rm-two-column-item ul {
+            padding-left: 25px;
+            margin-top: 15px;
+            /* Reduced */
+            font-size: 1.1em;
+        }
+
+        .rm-two-column-item li {
+            margin-bottom: 12px;
+            /* Reduced */
+            line-height: 1.6;
+        }
+
+        .rm-case table {
+            width: 100%;
+            margin: 25px 0;
+            /* Reduced from 40px */
+            background: white;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            border-collapse: collapse;
+        }
+
+        th,
+        .rm-case td {
+            padding: 20px;
+            /* Slightly reduced */
+            text-align: left;
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        .rm-case th {
+            background: linear-gradient(135deg, #4299e1, #3182ce);
+            color: white;
+            font-weight: 700;
+        }
+
+        .rm-case tr:hover {
+            background: #f8fafc;
+        }
+
+        .rm-conclusion {
+            background: linear-gradient(135deg, #4299e1 0%, #3182ce 100%);
+            color: white;
+            padding: 60px 40px;
+            /* Slightly reduced */
+            text-align: center;
+        }
+
+        .rm-conclusion .rm-case h2 {
+            color: white;
+            border-bottom-color: rgba(255, 255, 255, 0.3);
+        }
+
+        .rm-conclusion p {
+            font-size: 1.1em;
+            margin: 15px 0;
+        }
+
+        .rm-conclusion .rm-big-stat {
+            font-size: 1.4em;
+            margin-top: 30px;
+            opacity: 0.95;
+        }
+
+        .rm-footer {
+            background: #1a202c;
+            color: white;
+            padding: 40px;
+            text-align: center;
+        }
+
+        .rm-footer p {
+            margin: 10px 0;
+        }
+
+        .rm-footer-title {
+            font-size: 1.4em;
+            font-weight: 800;
+            margin-bottom: 10px;
+        }
+
+        .rm-footer-subtitle {
+            font-size: 1.1em;
+            opacity: 0.9;
+        }
+
+        .rm-footer-contact {
+            margin-top: 20px;
+            font-size: 1em;
+        }
+
+        .rm-footer-link {
+            color: #60a5fa;
+            font-weight: 600;
+            text-decoration: none;
+        }
+
+        .rm-footer-meta {
+            font-size: 0.85em;
+            opacity: 0.7;
+            margin-top: 15px;
+        }
+
+        @media (max-width: 768px) {
+            .rm-container {
+                padding: 0 20px;
+            }
+
+            .rm-ba-hero,
+            .rm-two-column {
+                grid-template-columns: 1fr;
+            }
+
+            .rm-header h1 {
+                font-size: 2.4em;
+            }
+
+            .rm-design-grid {
+                grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+                gap: 15px;
+            }
+
+            .rm-section {
+                padding: 20px;
+                /* Further reduced for mobile */
+            }
+
+            .rm-header,
+            .rm-conclusion,
+            .rm-footer {
+                padding-left: 20px;
+                padding-right: 20px;
+            }
+        }
+    
+</style>
 </head>
 
 <body>
@@ -462,82 +884,187 @@
 
 
 
-        <!-- PAGE 2: RENTOMOJO FURNITURE CAMPAIGNS (Hero case study) -->
-        <div class="page page-break">
-            <h2>RENTOMOJO FURNITURE CAMPAIGNS</h2>
-            <p style="color: #b0b0b0; margin-bottom: 25px;">Marketing Creatives + Product Visuals</p>
+        <!-- RENTOMOJO CASE STUDY — integrated into main portfolio -->
 
-
-
-            <div class="two-column challenge-solution">
-                <div class="column" style="padding-right: 20px;">
-                    <h3>THE CHALLENGE</h3>
-                    <ul>
-
-                        <li>❌ Product sizes unclear for online shoppers</li>
-                        <li>❌ Only 1 photo angle per item</li>
-                        <li>❌ Inconsistent colors & backgrounds</li>
-                        <li>❌ Low customer confidence = high returns</li>
-                    </ul>
+<div class="rm-case">
+    <div class="rm-container">
+        <div style="text-align:center; padding:28px 20px 10px; color:#6b7280; font-size:12px; letter-spacing:2px; text-transform:uppercase; font-weight:700;">Featured Project / Case Study</div>
+        <!-- HERO SECTION -->
+        <div class="rm-header">
+            <h1>RENTOMOJO PRODUCT UI REDESIGN</h1>
+            <p>Rentomojo Product Pages | 3 months | Applied to 20+ products</p>
+            <div class="rm-metrics">
+                <div class="rm-metric">
+                    <h3>+17%</h3>
+                    <p>Conversion Rate Lift</p>
                 </div>
-                <div class="column">
-                    <div class="text-center-container">
-                        <div style="font-family: 'Poppins', sans-serif; font-weight: 700; font-size: 16px; color: #ff6b6b; margin-bottom: 12px;">BEFORE</div>
-                        <img src="before.jpg" alt="Rentomojo Furniture Before" style="width:100%; height:auto; border-radius:8px;">
+                <div class="rm-metric">
+                    <h3>-22%</h3>
+                    <p>Return Rate Reduction</p>
+                </div>
+                <div class="rm-metric">
+                    <h3>2x</h3>
+                    <p>Time on Page</p>
+                </div>
+            </div>
+        </div>
 
+        <!-- TRANSFORMATION SECTION -->
+        <div class="rm-section">
+            <h2>TRANSFORMATION</h2>
+            <p class="rm-transformation-context"></p>
+            <div class="rm-ba-hero">
+                <div class="rm-ba-item">
+                    <img src="https://raw.githubusercontent.com/pujapwc32-rgb/puja-rani-case-stud/main/before.jpg" alt="Before sofa confusion" class="rm-ba-img">
+                    <div class="rm-ba-label">
+                        <strong>BEFORE</strong>
+                        <small>Scale confusion → 68% returns</small>
+                    </div>
+                </div>
+                <div class="rm-ba-item">
+                    <img src="https://raw.githubusercontent.com/pujapwc32-rgb/puja-rani-case-stud/main/FSB2SY2.jpg" alt="After lifestyle-first product page" class="rm-ba-img">
+                    <div class="rm-ba-label">
+                        <strong>AFTER</strong>
+                        <small>+17% conversions, -22% returns</small>
                     </div>
                 </div>
             </div>
+            <p class="rm-transformation-result"></p>
+        </div>
 
-
-
-
-            <div class="two-column challenge-solution" style="margin-top: 40px;">
-                <div class="column" style="padding-right: 20px;">
-                    <h3>THE SOLUTION</h3>
-                    <ul>
-
-                        <li>✅ Dimension guides on every product</li>
-                        <li>✅ 3 viewing angles minimum</li>
-                        <li>✅ Feature icons + human-scale illustrations</li>
-                        <li>✅ Consistent white backgrounds</li>
-                        <li>✅ Lifestyle product blend</li>
-                    </ul>
+        <!-- DESIGN SOLUTIONS SECTION - 8 images -->
+        <div class="rm-section">
+            <h2>DESIGN SOLUTIONS</h2>
+            <div class="rm-design-grid">
+                <div class="rm-design-card">
+                    <img src="https://raw.githubusercontent.com/pujapwc32-rgb/puja-rani-case-stud/main/FSB2SY9.jpg" alt="Visual Feature Specs">
+                    <div class="rm-card-label">
+                        Visual Specifications
+                        <small>4 annotations replace text walls → 28% engagement</small>
+                    </div>
                 </div>
-                <div class="column">
-                    <div class="text-center-container">
-                        <div style="font-family: 'Poppins', sans-serif; font-weight: 700; font-size: 16px; color: #4F9FFF; margin-bottom: 12px;">AFTER</div>
-                        <img src="after.jpg" alt="Rentomojo Furniture After" style="width:100%; height:auto; border-radius:8px;">
-
+                <div class="rm-design-card">
+                    <img src="https://raw.githubusercontent.com/pujapwc32-rgb/puja-rani-case-stud/main/FSB2SY8.jpg" alt="Dimensions overlay">
+                    <div class="rm-card-label">Clear Dimensions
+                        <small>Length, width, height directly on the product</small>
+                    </div>
+                </div>
+                <div class="rm-design-card">
+                    <img src="https://raw.githubusercontent.com/pujapwc32-rgb/puja-rani-case-stud/main/FSB2SY3.jpg" alt="Comfort sliders">
+                    <div class="rm-card-label">Attribute Sliders
+                        <small>Seat height, comfort and armrest style at a glance</small>
+                    </div>
+                </div>
+                <div class="rm-design-card">
+                    <img src="https://raw.githubusercontent.com/pujapwc32-rgb/puja-rani-case-stud/main/FSB2SY6.jpg" alt="4 Plush Cushions">
+                    <div class="rm-card-label">4 Plush Cushions
+                        <small>Included for maximum comfort</small>
+                    </div>
+                </div>
+                <div class="rm-design-card">
+                    <img src="https://raw.githubusercontent.com/pujapwc32-rgb/puja-rani-case-stud/main/FSB2SY5.jpg" alt="Material closeup">
+                    <div class="rm-card-label">Material Details
+                        <small>Zoomed-in views for fabric quality</small>
+                    </div>
+                </div>
+                <div class="rm-design-card">
+                    <img src="https://raw.githubusercontent.com/pujapwc32-rgb/puja-rani-case-stud/main/FSB2SY4.jpg" alt="Back view">
+                    <div class="rm-card-label">360° View
+                        <small>Back and side angles for full confidence</small>
                     </div>
                 </div>
             </div>
+        </div>
 
+        <!-- SOFA PRODUCT EXPERIENCE -->
+        <div class="rm-section">
+            <h2>SOFA PRODUCT EXPERIENCE</h2>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 25px; margin: 25px 0;">
+                <div>
+                    <img src="https://raw.githubusercontent.com/pujapwc32-rgb/puja-rani-case-stud/main/FSB2SY1.jpg" alt="Sofa lifestyle" style="width:100%; height:280px; object-fit:contain; object-position:center; border-radius:16px; box-shadow:0 15px 40px rgba(0,0,0,0.15); background:#f8fafc;">
 
+                    <p style="text-align:center; margin-top:15px; font-weight:600; color:#27ae60;">
+                        Lifestyle Context<br><small>Real-room scale + desire</small>
+                    </p>
+                </div>
+                <div>
+                    <img src="https://raw.githubusercontent.com/pujapwc32-rgb/puja-rani-case-stud/main/FSB2SY7.jpg" alt="Sofa human scale" style="width:100%; height:280px; object-fit:contain; object-position:center; border-radius:16px; box-shadow:0 15px 40px rgba(0,0,0,0.15);">
+                    <p style="text-align:center; margin-top:15px; font-weight:600; color:#4299e1;">
+                        Human Scale Reference<br><small>6ft model = instant size clarity</small>
+                    </p>
+                </div>
+            </div>
+        </div>
 
+        <!-- IMPACT TABLE -->
+        <div class="rm-section">
+            <h2>IMPACT BY FEATURE</h2>
+            <table>
+                <tr>
+                    <th>Challenge</th>
+                    <th>Before</th>
+                    <th>Solution</th>
+                    <th>Result</th>
+                </tr>
+                <tr>
+                    <td>Scale Confusion</td>
+                    <td>No reference</td>
+                    <td>6'x5ft human model</td>
+                    <td><strong>-22% returns</strong></td>
+                </tr>
+                <tr>
+                    <td>Limited Views</td>
+                    <td>Single angle</td>
+                    <td>360° + dimensions</td>
+                    <td><strong>+17% conversions</strong></td>
+                </tr>
+                <tr>
+                    <td>Feature Discovery</td>
+                    <td>Text only</td>
+                    <td>Interactive icons</td>
+                    <td><strong>+28% engagement</strong></td>
+                </tr>
+                <tr>
+                    <td>Mobile UX</td>
+                    <td>Pinch zoom</td>
+                    <td>Swipe + tap UI</td>
+                    <td><strong>2x time on page</strong></td>
+                </tr>
+            </table>
+        </div>
+        <!-- COMPLETE PROCESS RESULTS SECTION - Improved version -->
+        <div class="rm-section">
+            <h2>PROCESS IMPACT</h2>
+            <div class="rm-two-column">
+                <!-- LEFT: My Process - Streamlined + Action-focused -->
+                <div class="rm-two-column-item">
+                    <h3 style="color: #4299e1;">My Process</h3>
+                    <p><strong>Research:</strong> Uncovered 68% sizing complaints via user interviews + competitor analysis (IKEA, Pepperfry)</p>
+                    <p><strong>Design:</strong> Built Figma prototypes → Photoshop lifestyle composites → Illustrator feature icons</p>
+                    <p><strong>Test & Scale:</strong> A/B tested live on 20 SKUs → Rolled out production-ready system</p>
+                </div>
 
+                <!-- SHORTER Business Results - Same impact, half the length -->
+                <div class="rm-two-column-item">
+                    <h3 style="color: #27ae60;">Business Impact</h3>
+                    <ul>
+                        <li><strong>+19% conversion</strong> via clear visuals</li>
+                        <li><strong>-18% returns</strong> better sizing clarity</li>
+                        <li><strong>2× time on page</strong> interactive details</li>
+                        <li><strong>+28% CTR</strong> creative to page flow</li>
+                        <li><strong>3.2× ROI</strong> add-to-cart + returns combo</li>
+                        <li><strong>20+ SKUs scaled</strong></li>
+                    </ul>
+                </div>
 
-            <h3>RESULT</h3>
-            <p style="font-size: 15px; color: #b0b0b0; margin: 15px 0;">Better visuals = confident buyers = more sales & reduced returns.</p>
-
-
-
-            <div style="text-align: center; margin: 25px 0; background: #1a2a3a; padding: 15px; border-radius: 8px;">
-                <p style="font-size: 16px; color: #4F9FFF; font-weight: 700; margin: 0;"><strong>+17% Conversions | -22% Returns | +28% CTR</strong></p>
             </div>
 
-            <div class="divider"></div>
 
+        </div>
 
-            <p style="text-align: center; margin-top: 30px;">
-                <a href="https://behance.net/pujarani14" target="_blank" class="case-link">VIEW FULL CASE STUDY →</a>
-            </p>
-
-
-
-            <!-- PAGE 3: RENTOMOJO MARKETING CREATIVES -->
+<!-- PAGE 2: SELECTED MARKETING CREATIVES -->
             <div class="page page-break">
-                <h2>RENTOMOJO MARKETING CREATIVES</h2>
+                <h2>SELECTED MARKETING CREATIVES</h2>
                 <p style="color: #b0b0b0; margin-bottom: 25px;">Promotional & Launch Campaigns</p>
 
                 <div class="two-column">
@@ -698,6 +1225,26 @@
                                         <div class="cta-heading" style="font-size: 25px;">LET'S CREATE SOMETHING GREAT</div>
 
                                         <p style="font-size: 16px; color: #4F9FFF; margin: 15px 0;">Available for freelance & full-time design roles</p>
+</body>
+</html>
+          
+       
+       
+       
+
+       
+
+
+
+
+       
+
+
+    
+
+
+
+                                
 
 
 
